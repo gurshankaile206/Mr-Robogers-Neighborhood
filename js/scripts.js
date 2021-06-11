@@ -16,5 +16,6 @@ function beepBoop(input) {
     if (!Number.isInteger(input)) {
         return "input is not an number";
     }
+    let string = input.toString();
 };
 

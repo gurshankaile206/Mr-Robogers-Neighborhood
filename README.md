@@ -59,4 +59,49 @@ function beepBoop(input) {
 
 Describe: beepBoop();
 Test: "It should return a string stating "input is not a number" if user inputs a value other than an integer"
-Expect(beepBoop("hello").toEqual(" ?")); 
+Expect(beepBoop("hello").toEqual("input is not a number")); 
+
+function beepBoop(input) {
+    if  (input === 0) {
+        return "0";
+    }
+    if  (input === 1) {
+        return "Beep"
+    }
+    if  (input === 2) {
+        return "Boop"
+    }
+    if (input === 3) {
+        return "Won't you be my neighbor?";
+    }
+    if (!Number.isInteger(input)) {
+        return "input is not an number";
+    }
+    
+};
+
+Describe: beepBoop();
+Test: "It should output the number inputted as a string"
+Expect(beepBoop(10).toEqual("10")); 
+
+
+function beepBoop(input) {
+    if  (input === 0) {
+        return "0";
+    }
+    if  (input === 1) {
+        return "Beep"
+    }
+    if  (input === 2) {
+        return "Boop"
+    }
+    if (input === 3) {
+        return "Won't you be my neighbor?";
+    }
+    if (!Number.isInteger(input)) {
+        return "input is not an number";
+    }
+    let string = input.toString();
+};
+
+

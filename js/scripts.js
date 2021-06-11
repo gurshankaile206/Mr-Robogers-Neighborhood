@@ -8,8 +8,9 @@ function beepBoop(input) {
         return "Beep"
     }
     if  (input === 2) {
-        return ""
+        return "Boop"
     }
-    if  (input)
+    if (input === 3) {
+        return "Won't you be my neighbor?";
+    }
 };
-

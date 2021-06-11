@@ -8,3 +8,15 @@ function beepBoop(input) {
         return "0";
     }
 };
+
+Describe: beepBoop(); 
+Test: "It should return string "Beep" if the number 1 is inputted"
+Expect(beepBoop(1).toEqual("Beep"))
+
+Describe: beepBoop();
+Test: "It should return string "Boop" if the number 2 is inputted"
+Expect(beepBoop(2).toEqual("Boop")); 
+
+Describe: beepBoop();
+Test: "It should return string "Won't you be my neighbor?" if number 3 is inputted"
+Expect(beepBoop(3).toEqual("Won't you be my neighbor?")); 

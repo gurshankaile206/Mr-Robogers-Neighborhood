@@ -13,4 +13,8 @@ function beepBoop(input) {
     if (input === 3) {
         return "Won't you be my neighbor?";
     }
+    if (!Number.isInteger(input)) {
+        return "input is not an number";
+    }
 };
+

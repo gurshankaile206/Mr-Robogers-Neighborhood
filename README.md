@@ -105,3 +105,77 @@ function beepBoop(input) {
 };
 
 
+Describe: beepBoop();
+Test: "It should output 'Won't you be my neighbor?' if user inputs 32"
+Expect(beepBoop(32).toEqual("Won't you be my neightbor?")); 
+
+function beepBoop(input) {
+   
+    if (!Number.isInteger(input)) {
+        return "input is not an number";
+    }
+    let string = input.toString().split('');
+    
+     if  (string.includes('0')) {
+        return "0";
+    } if (string.includes('3')) {
+        return "Won't you be my neighbor?";
+};
+
+
+Describe: beepBoop();
+Test: "It should output 'boop' if user inputs 21"
+Expect(beepBoop(21).toEqual("?")); 
+
+function beepBoop(input) {
+   
+    if (!Number.isInteger(input)) {
+        return "input is not an number";
+    }
+    let string = input.toString().split('');
+    
+     if  (string.includes('0')) {
+        return "0";
+    } if (string.includes('3')) {
+        return "Won't you be my neighbor?";
+    } else if  (string.includes('2')) {
+        return "Boop"
+};
+
+
+Describe: beepBoop();
+Test: "It should output 'beep' if user inputs 11"
+Expect(beepBoop(11).toEqual("beep")); 
+
+function beepBoop(input) {
+   
+    if (!Number.isInteger(input)) {
+        return "input is not an number";
+    }
+    let string = input.toString().split('');
+    
+     if  (string.includes('0')) {
+        return "0";
+    } if (string.includes('3')) {
+        return "Won't you be my neighbor?";
+    } else if  (string.includes('2')) {
+        return "Boop"
+    } else if  (string.includes('1')) {
+        return "Beep"
+    }
+};
+
+Describe: counter();
+Test: "It should output an array starting from 0 to the users input value"
+Expect(beepBoop(5).toEqual([0,1,2,3,4,5])); 
+
+function range(input) {
+    let output = [];
+    let count = 0;
+    while(count <= input) {
+        output.push(count);
+        count++
+    }
+    return output
+}
+

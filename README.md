@@ -1,19 +1,16 @@
 
-Describe: beepBoop()
+Describe: robogers(input);
 Test: "It should return a string with a 0 if the number 0 is inputted"
-Expect(beepBoop(0).toEqual([0]); 
-
-function beepBoop(input) {
+code: function robogers(input) {
     if (input === 0) {
         return "0";
     }
 };
+Expect(robogers(0).toEqual([0]); 
 
-Describe: beepBoop(); 
+
 Test: "It should return string "Beep" if the number 1 is inputted"
-Expect(beepBoop(1).toEqual("Beep"))
-
-function beepBoop(input) {
+code: function robogers(input) {
     if  (input === 0) {
         return "0";
     }
@@ -21,12 +18,11 @@ function beepBoop(input) {
         return "Beep"
     }
 }
+Expect(robogers(1).toEqual("Beep"))
 
-Describe: beepBoop();
+
 Test: "It should return string "Boop" if the number 2 is inputted"
-Expect(beepBoop(2).toEqual("Boop")); 
-
-function beepBoop(input) {
+code: function robogers(input) {
     if  (input === 0) {
         return "0";
     }
@@ -36,13 +32,11 @@ function beepBoop(input) {
     if  (input === 2) {
         return "Boop"
     }
-}
+Expect(robogers(2).toEqual("Boop")); 
 
-Describe: beepBoop();
+
 Test: "It should return string "Won't you be my neighbor?" if number 3 is inputted"
-Expect(beepBoop(3).toEqual("Won't you be my neighbor?")); 
-
-function beepBoop(input) {
+code: function robogers(input) {
     if  (input === 0) {
         return "0";
     }
@@ -56,60 +50,13 @@ function beepBoop(input) {
         return "Won't you be my neighbor?";
     }
 };
-
-Describe: beepBoop();
-Test: "It should return a string stating "input is not a number" if user inputs a value other than an integer"
-Expect(beepBoop("hello").toEqual("input is not a number")); 
-
-function beepBoop(input) {
-    if  (input === 0) {
-        return "0";
-    }
-    if  (input === 1) {
-        return "Beep"
-    }
-    if  (input === 2) {
-        return "Boop"
-    }
-    if (input === 3) {
-        return "Won't you be my neighbor?";
-    }
-    if (!Number.isInteger(input)) {
-        return "input is not an number";
-    }
-    
-};
-
-Describe: beepBoop();
-Test: "It should output the number inputted as a string"
-Expect(beepBoop(10).toEqual("10")); 
+Expect(robogers(3).toEqual("Won't you be my neighbor?")); 
 
 
-function beepBoop(input) {
-    if  (input === 0) {
-        return "0";
-    }
-    if  (input === 1) {
-        return "Beep"
-    }
-    if  (input === 2) {
-        return "Boop"
-    }
-    if (input === 3) {
-        return "Won't you be my neighbor?";
-    }
-    if (!Number.isInteger(input)) {
-        return "input is not an number";
-    }
-    let string = input.toString();
-};
 
 
-Describe: beepBoop();
 Test: "It should output 'Won't you be my neighbor?' if user inputs 32"
-Expect(beepBoop(32).toEqual("Won't you be my neightbor?")); 
-
-function beepBoop(input) {
+code: function robogers(input) {
    
     if (!Number.isInteger(input)) {
         return "input is not an number";
@@ -121,13 +68,12 @@ function beepBoop(input) {
     } if (string.includes('3')) {
         return "Won't you be my neighbor?";
 };
+Expect(robogers(32).toEqual("Won't you be my neightbor?")); 
 
 
-Describe: beepBoop();
+
 Test: "It should output 'boop' if user inputs 21"
-Expect(beepBoop(21).toEqual("?")); 
-
-function beepBoop(input) {
+code: function robogers(input) {
    
     if (!Number.isInteger(input)) {
         return "input is not an number";
@@ -141,13 +87,12 @@ function beepBoop(input) {
     } else if  (string.includes('2')) {
         return "Boop"
 };
+Expect(robogers(21).toEqual("?")); 
 
 
-Describe: beepBoop();
+
 Test: "It should output 'beep' if user inputs 11"
-Expect(beepBoop(11).toEqual("beep")); 
-
-function beepBoop(input) {
+code: function robogers(input) {
    
     if (!Number.isInteger(input)) {
         return "input is not an number";
@@ -163,12 +108,11 @@ function beepBoop(input) {
     } else if  (string.includes('1')) {
         return "Beep"
     }
-};
+Expect(robogers(11).toEqual("beep")); 
+
 
 Describe: counter();
 Test: "It should output an array starting from 0 to the users input value"
-Expect(beepBoop(5).toEqual([0,1,2,3,4,5])); 
-
 function range(input) {
     let output = [];
     let count = 0;
@@ -178,4 +122,52 @@ function range(input) {
     }
     return output
 }
+Expect(robogers(5).toEqual([0,1,2,3,4,5])); 
+
+Describe: robogers(); 
+Test: "It should replace values 0 through 3 with the given string values using .map and if conditions" 
+code: function robogers(input) {
+    let numArray = [];
+    let count = 0;
+    while (count <= input) {
+        numArray.push(count.toString());
+        count ++;
+    }
+    let output = numArray.map(function(number){
+        if (number.includes('3')) {
+            return number = "Won't you be my neighbor?";
+        } else if (number.includes("2")) {
+            return number = "Boop";
+        } else if (number.includes('1')) {
+            return "Beep";
+        } else {
+            return (number);
+        };
+    });
+    return output
+};
+Expect(robogers(5).toEqual(["0","Beep","Boop", "Won't you be my neighbor?", "4", "5"]));
+
+Test: "It should replace values 0 through 3 with the given strings and return the numbers as integers using parseInt"
+code: function robogers(input) {
+    let numArray = [];
+    let count = 0;
+    while (count <= input) {
+        numArray.push(count.toString());
+        count ++;
+    }
+    let output = numArray.map(function(number){
+        if (number.includes('3')) {
+            return number = "Won't you be my neighbor?";
+        } else if (number.includes("2")) {
+            return number = "Boop";
+        } else if (number.includes('1')) {
+            return "Beep";
+        } else {
+            return parseInt(number);
+        };
+    });
+    return output
+};
+Expect(robogers(5).toEqual([0,"Beep","Boop", "Won't you be my neighbor?", 4, 5]));
 

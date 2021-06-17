@@ -175,7 +175,7 @@ Expect(robogers(5).toEqual([0,"Beep","Boop", "Won't you be my neighbor?", 4, 5])
 // UI logic test
 
 Describe: const result = robogers(inputValue);
-Test: "should display "
+Test: "should display output value on Webpage"
 code: $(document).ready(function() {
     $("form#roboger").submit(function() {
         event.preventDefault();
@@ -184,4 +184,4 @@ code: $(document).ready(function() {
         $("#output").text(result);
     });
 });
-Expect: ()
+Expect: (robogers(5).toEqual([0,"Beep","Boop", "Won't you be my neighbor?", 4, 5]));

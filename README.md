@@ -1,3 +1,41 @@
+## Roboger's Neighborhood
+
+#### By Gurshan Kaile
+
+#### A simple javscript program that outputs the user's input value and returns a range of numbers from 0 to users inputted number with some expections
+
+## Technologies Used 
+
+* HTML
+* CSS
+* Javascript
+* JQuery
+
+## Description 
+
+The browser application allows the user to input a value, the program will then count from 0 to inputted value with the exception that numbers containing a 1, 2, and 3 are equal to strings "beep", "boop", or "Won't you be my neighbor?". These exceptions are written from least to most important. The first expection should apply unless the second expection does, and the same with the third. 
+
+* The number 13 should be replaced with "Won't you be my neighbor?"
+* The number 21 should be replaced with "Boop".
+* The number 32 should be replaced with "Won't you be my neighbor?"
+
+Example: If a user inputs a 5, the program should display a list of values: "0", "Beep!", "Boop", "Won't you be my neighbor?", 4, 5
+
+## Setup/Installation Requirements 
+
+* clone this repository to your desktop
+* Navigate to the directory on your device
+* Open the file in VS code
+* Open the browser extension
+* Input value in browser and test out results
+
+## Known Bugs
+
+* none
+
+## Tests
+
+
 // Business logic tests
 
 Describe: robogers(input);
@@ -185,3 +223,13 @@ code: $(document).ready(function() {
     });
 });
 Expect: (robogers(5).toEqual([0,"Beep","Boop", "Won't you be my neighbor?", 4, 5]));
+
+## License
+
+**MIT**
+
+Copyright (c) 2021 Gurshan Kaile
+
+## Contact Information 
+
+Gurshan Kaile gurshankaile206@gmail.com

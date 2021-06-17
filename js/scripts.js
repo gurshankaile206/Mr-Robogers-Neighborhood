@@ -81,3 +81,13 @@ function robogers(input) {
 };
 
 
+// UI logic
+
+$(document).ready(function() {
+    $("form#roboger").submit(function() {
+        event.preventDefault();
+        const inputValue = $("#input1").val();
+        const result = robogers(inputValue);
+        $("#output").text(result);
+    });
+});

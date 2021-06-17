@@ -1,3 +1,4 @@
+// Business logic tests
 
 Describe: robogers(input);
 Test: "It should return a string with a 0 if the number 0 is inputted"
@@ -171,3 +172,16 @@ code: function robogers(input) {
 };
 Expect(robogers(5).toEqual([0,"Beep","Boop", "Won't you be my neighbor?", 4, 5]));
 
+// UI logic test
+
+Describe: const result = robogers(inputValue);
+Test: "should display "
+code: $(document).ready(function() {
+    $("form#roboger").submit(function() {
+        event.preventDefault();
+        const inputValue = $("#input1").val();
+        const result = robogers(inputValue);
+        $("#output").text(result);
+    });
+});
+Expect: ()
